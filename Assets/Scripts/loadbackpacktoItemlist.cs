@@ -11,6 +11,8 @@ public class loadbackpacktoItemlist : MonoBehaviour {
 
     public List<Text> texts;
 
+    public List<Text> counts;
+
     public List<Image> images;
 
     public GameObject backpack;
@@ -23,52 +25,18 @@ public class loadbackpacktoItemlist : MonoBehaviour {
 
     public void LoadThingToBackpack()
     {
-
         int size = backpack.GetComponentInChildren<Backpack>().items.Count;
-
-        switch (size)
+        
+        for (int i = 0; i < size; i++)
         {
-            case 0:
-                items[0].SetActive(false);
-                items[1].SetActive(false);
-                items[2].SetActive(false);
-                break;
-            case 1:
-                items[0].SetActive(true);
-                texts[0].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[0].item.name;
+            items[i].SetActive(true);
 
-                items[1].SetActive(false);
-                items[2].SetActive(false);
-
-                images[0].sprite = backpack.GetComponentInChildren<Backpack>().items[0].item.itemImage;
-                break;
-            case 2:
-                items[0].SetActive(true);
-                texts[0].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[0].item.name;
-
-                items[1].SetActive(true);
-                texts[1].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[1].item.name;
-
-                items[2].SetActive(false);
-
-                images[0].sprite = backpack.GetComponentInChildren<Backpack>().items[0].item.itemImage;
-                images[1].sprite = backpack.GetComponentInChildren<Backpack>().items[1].item.itemImage;
-                break;
-            default:
-                items[0].SetActive(true);
-                texts[0].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[0].item.name;
-
-                items[1].SetActive(true);
-                texts[1].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[1].item.name;
-
-                items[2].SetActive(true);
-                texts[2].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[2].item.name;
-
-                images[0].sprite = backpack.GetComponentInChildren<Backpack>().items[0].item.itemImage;
-                images[1].sprite = backpack.GetComponentInChildren<Backpack>().items[1].item.itemImage;
-                images[2].sprite = backpack.GetComponentInChildren<Backpack>().items[2].item.itemImage;
-                break;
+            texts[i].GetComponentInChildren<Text>().text = backpack.GetComponentInChildren<Backpack>().items[i].item.name;
+            counts[i].GetComponentInChildren<Text>().text = "X " + backpack.GetComponentInChildren<Backpack>().items[i].count;
+            images[i].sprite = backpack.GetComponentInChildren<Backpack>().items[i].item.itemImage;
         }
+
+        
 
 
     }
