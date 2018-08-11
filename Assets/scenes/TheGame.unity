@@ -668,7 +668,7 @@ RectTransform:
   m_Children:
   - {fileID: 1073461956}
   m_Father: {fileID: 1210588947}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1428,7 +1428,6 @@ RectTransform:
   - {fileID: 1545916281}
   - {fileID: 1706865132}
   - {fileID: 1097053694}
-  - {fileID: 738856708}
   - {fileID: 1309984067}
   m_Father: {fileID: 834330015}
   m_RootOrder: 3
@@ -3607,8 +3606,8 @@ RectTransform:
   - {fileID: 1104806078}
   - {fileID: 1270568910}
   - {fileID: 2025329955}
-  m_Father: {fileID: 333755410}
-  m_RootOrder: 3
+  m_Father: {fileID: 1097053694}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5668,7 +5667,7 @@ RectTransform:
   m_Children:
   - {fileID: 882843170}
   m_Father: {fileID: 1210588947}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6247,6 +6246,7 @@ RectTransform:
   - {fileID: 424784758}
   - {fileID: 7625276}
   - {fileID: 1823517525}
+  - {fileID: 738856708}
   m_Father: {fileID: 333755410}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6797,8 +6797,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 87638029}
   - {fileID: 1011331035}
+  - {fileID: 87638029}
   - {fileID: 85675344}
   - {fileID: 1430516387}
   - {fileID: 834330015}
@@ -7125,7 +7125,7 @@ RectTransform:
   m_Children:
   - {fileID: 929779910}
   m_Father: {fileID: 333755410}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10436,6 +10436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bagMenu: {fileID: 333755409}
+  itemList: {fileID: 1097053693}
   items:
   - {fileID: 865305399}
   - {fileID: 1862475639}
@@ -11392,7 +11393,7 @@ Prefab:
     - target: {fileID: 114244786905329586, guid: 6a775720960440c468ea00c8e7b7753c,
         type: 2}
       propertyPath: items.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114883671212229124, guid: 6a775720960440c468ea00c8e7b7753c,
         type: 2}
@@ -11471,7 +11472,7 @@ Prefab:
     - target: {fileID: 114244786905329586, guid: 6a775720960440c468ea00c8e7b7753c,
         type: 2}
       propertyPath: items.Array.data[1].count
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114883671212229124, guid: 6a775720960440c468ea00c8e7b7753c,
         type: 2}
